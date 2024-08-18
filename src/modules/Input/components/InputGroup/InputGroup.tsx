@@ -16,7 +16,7 @@ type InputGroupProps = {
 
 type Props = InputGroupProps &
   InputTextProps &
-  InputLabelProps &
+  Omit<InputLabelProps, 'htmlFor'> &
   InputAnnotationProps;
 
 export const InputGroup: React.FC<Props> = ({
