@@ -15,3 +15,9 @@
 .input__label-required--asterisk {
   color: #d92d20;
 }
+
+@media (prefers-color-scheme: dark) {
+  .input__label {
+    color: #a0a0ab;
+  }
+}

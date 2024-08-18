@@ -57,3 +57,22 @@
 .input__wrapper-field--quiet:hover {
   border-color: #d1d1d6;
 }
+
+@media (prefers-color-scheme: dark) {
+  .input__wrapper-field {
+    background-color: #131316;
+    border: 1px solid #51525c;
+
+    font-size: 12px;
+    line-height: 20px;
+    color: #fafafa;
+  }
+
+  .input__wrapper-field--error {
+    border-color: #fda29b;
+  }
+
+  .input__wrapper-field:disabled::placeholder {
+    color: #3f3f46;
+  }
+}

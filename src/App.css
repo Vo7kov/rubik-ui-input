@@ -5,3 +5,9 @@
 
   padding: 0px 100px;
 }
+
+@media (prefers-color-scheme: dark) {
+  .app {
+    background-color: #141414;
+  }
+}

@@ -42,3 +42,13 @@
   visibility: visible;
   opacity: 1;
 }
+
+@media (prefers-color-scheme: dark) {
+  .tooltip .tooltip__text {
+    background-color: #a0a0ab;
+  }
+
+  .tooltip .tooltip__text::after {
+    border-color: #a0a0ab transparent transparent transparent;
+  }
+}

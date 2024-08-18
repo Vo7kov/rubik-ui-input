@@ -34,6 +34,7 @@ export const App: React.FC = () => {
         iconAfterSecondAlt="shortcut"
         tooltipText="this is tooltip"
         value={value}
+        error
         onChange={(event) => setValue(event.target.value)}
       />
     </div>
