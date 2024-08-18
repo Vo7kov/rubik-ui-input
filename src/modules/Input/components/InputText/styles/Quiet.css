@@ -1,0 +1,7 @@
+.input__wrapper-field--quiet {
+  border-color: transparent;
+}
+
+.input__wrapper-field--quiet:hover {
+  border-color: #d1d1d6;
+}

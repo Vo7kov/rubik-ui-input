@@ -1,0 +1,44 @@
+@import url('./styles/Sizes.css');
+@import url('./styles/Error.css');
+@import url('./styles/Quiet.css');
+@import url('./styles/Icon.css');
+
+.input__wrapper {
+  position: relative;
+}
+
+.input__wrapper-field {
+  display: block;
+  width: 100%;
+
+  background-color: #fff;
+  border: 1px solid #d1d1d6;
+  border-radius: 4px;
+
+  font-size: 12px;
+  line-height: 20px;
+  color: #1a1a1e;
+}
+
+.input__wrapper-field::placeholder {
+  color: #70707b;
+  opacity: 1;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.input__wrapper-field:focus {
+  border-color: #84caff;
+  box-shadow: 0px 0px 0px 4px #2e90fa3d;
+  outline: none;
+}
+
+.input__wrapper-field:disabled::placeholder {
+  color: #d1d1d6;
+
+  cursor: not-allowed;
+  cursor: -moz-not-allowed;
+  cursor: -webkit-not-allowed;
+}
