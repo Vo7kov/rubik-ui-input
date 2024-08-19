@@ -14,7 +14,7 @@ import infoError from '../assets/input/info/infoError.svg';
 import shortcut from '../assets/input/shortcut.svg';
 
 const meta = {
-  title: 'Input',
+  title: 'InputGroup',
   component: InputGroup,
   tags: ['autodocs'],
 } satisfies Meta<typeof InputGroup>;
@@ -22,8 +22,13 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-/** Some kind of features such as `tootlipText` and padding for right icons don't work properly in this demo, but in usage everything is fine */
-export const Input: Story = {
+/**
+ * This is main component which contains all other components.
+ * Also, according to task I've decided to use standart css because it's native and doesn't require additional packages,
+ * which is very useful,
+ * because it requires less space if you want to publish it anywhere
+ */
+export const Base: Story = {
   args: {
     id: 'id',
     label: 'Test',
@@ -43,6 +48,8 @@ export const Input: Story = {
 
     iconAfterSecond: shortcut,
     iconAfterSecondAlt: 'shortcut',
+
+    tooltipText: 'This is tooltip',
   },
   render: (args) => {
     const [value, setValue] = useState('');

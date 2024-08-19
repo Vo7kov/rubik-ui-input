@@ -4,7 +4,7 @@ import { Tooltip } from '../../../../components/Tooltip/Tooltip';
 
 export type InputLabelProps = {
   label: string;
-  htmlFor?: string;
+  htmlFor: string;
   required?: 'optional' | 'default' | 'asterisk';
   tooltipText?: string;
 };
