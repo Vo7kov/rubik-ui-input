@@ -7,6 +7,5 @@
   "bracketSpacing": true,
   "bracketSameLine": false,
   "printWidth": 80,
-  "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true
+  "importOrderSeparation": true
 }
