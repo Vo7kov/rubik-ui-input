@@ -1,1 +1,0 @@
-import{j as o}from"./jsx-runtime-CkxqCPlQ.js";const e=({tooltipText:t})=>o.jsx("div",{className:"tooltip","data-tooltip":t});e.__docgenInfo={description:"",methods:[],displayName:"Tooltip",props:{tooltipText:{required:!0,tsType:{name:"string"},description:""}}};export{e as T};
