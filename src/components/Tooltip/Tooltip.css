@@ -1,54 +1,68 @@
 .tooltip {
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+  background-image: url('../../assets/input/info/info.svg');
+  background-size: cover;
+  background-position: center;
   position: relative;
-  cursor: pointer;
 }
 
-.tooltip .tooltip__text {
-  visibility: hidden;
-  background-color: #131316;
-  color: #fff;
-
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 20px;
-  text-align: center;
-  text-wrap: nowrap;
+.tooltip::before,
+.tooltip::after {
+  --scale: 0;
+  --arrow-size: 4px;
+  --tooltip-color: #131316;
 
   position: absolute;
-  left: -250%;
-  bottom: 150%;
-  padding: 8px 12px;
-
-  border-radius: 8px;
-  z-index: 1;
-
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.tooltip .tooltip__text::after {
-  content: '';
-  position: absolute;
-  top: 100%;
+  top: -0.25rem;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(var(--translate-y, 0))
+    scale(var(--scale));
 
-  border-width: 4px;
-  border-style: solid;
-  border-color: #131316 transparent transparent transparent;
+  transition: 150ms transform;
+  transform-origin: bottom center;
 }
 
-.tooltip:hover .tooltip__text {
-  visibility: visible;
-  opacity: 1;
+.tooltip::before {
+  --translate-y: calc(-100% - var(--arrow-size));
+
+  content: attr(data-tooltip);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 0.3rem;
+
+  text-align: center;
+  font-size: 12px;
+  text-wrap: nowrap;
+  font-weight: 600;
+
+  background: var(--tooltip-color);
+}
+
+.tooltip:hover::before,
+.tooltip:hover::after {
+  --scale: 1;
+}
+
+.tooltip::after {
+  --translate-y: calc(-1 * var(--arrow-size));
+
+  content: '';
+
+  border: var(--arrow-size) solid transparent;
+  border-top-color: var(--tooltip-color);
+  transform-origin: top center;
 }
 
 @media (prefers-color-scheme: dark) {
-  .tooltip .tooltip__text {
-    background-color: #a0a0ab;
+  .tooltip::before,
+  .tooltip::after {
+    --tooltip-color: #d1d1d6;
   }
 
-  .tooltip .tooltip__text::after {
-    border-color: #a0a0ab transparent transparent transparent;
+  .tooltip::before {
+    color: #131316;
   }
 }

@@ -1,7 +1,5 @@
 import React from 'react';
 
-import info from '../../assets/input/info/info.svg';
-
 import './Tooltip.css';
 
 type Props = {
@@ -9,11 +7,5 @@ type Props = {
 };
 
 export const Tooltip: React.FC<Props> = ({ tooltipText }) => {
-  return (
-    <div className="tooltip">
-      <img src={info} alt="tooltip" />
-
-      <span className="tooltip__text">{tooltipText}</span>
-    </div>
-  );
+  return <div className="tooltip" data-tooltip={tooltipText}></div>;
 };
