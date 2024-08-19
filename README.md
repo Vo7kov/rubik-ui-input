@@ -4,3 +4,6 @@
 3. Run `npm run dev` to view without `storybook`
 
 If you want to open docs run `npm run storybook`
+
+Here is the deploy of storybook
+https://rubik-ui-input.onrender.com
